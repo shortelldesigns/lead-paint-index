@@ -142,6 +142,10 @@ def index_page() -> str:
       <p class="kicker">Public directory</p>
       <h1>Find a certified lead inspector, or a recognized test kit</h1>
       <p class="lede">An independent index of EPA-recognized NLLAP laboratories and Michigan’s published certified lead inspectors and inspector/risk assessors. Names are transcribed from those sources. No invented labs. No paid placement.</p>
+      <p>This index lists <a href="labs.html">104 unique NLLAP labs</a>
+      and <a href="michigan.html">218 Michigan certified inspectors</a>.
+      Other states: use <a href="verify.html">EPA’s locator</a>.
+      <a href="how-to.html">How to test a home for lead paint</a>.</p>
 
       <div class="paths">
         <p class="paths-label">Two ways to get an answer</p>
@@ -197,8 +201,8 @@ def index_page() -> str:
       </ul>
 """
     return page(
-        "Certified Lead Inspector or DIY Kit | Lead Paint Index",
-        "Find EPA-recognized NLLAP lead labs and Michigan certified lead inspectors, or follow a DIY kit. Compiled by Stephen Shortell. Unpaid directory, not EPA-endorsed.",
+        "Find a Certified Lead Inspector or NLLAP Lab",
+        "Independent index of 104 unique EPA NLLAP labs and 218 Michigan certified inspectors. Other states: use EPA’s locator. No invented names. No paid placement.",
         "index.html",
         body,
     )
@@ -281,6 +285,9 @@ def how_to_page() -> str:
         <li>You need a report that maps lead-based paint (inspection), current hazards (risk assessment), or both.</li>
         <li>A kit result is positive, inconclusive, or was used on a surface EPA did not evaluate.</li>
       </ul>
+      <p>This index lists <a href="labs.html">104 unique NLLAP labs</a>
+      and <a href="michigan.html">218 Michigan certified inspectors</a>.
+      <a href="verify.html">Verify a certified lead professional</a>.</p>
       <p>In Michigan, use this index’s <a href="michigan.html">transcribed MDHHS lists</a> ({N_MI} people). In every other state, use <a href="verify.html">EPA’s Lead-based Paint Professional Locator</a> or your state lead program. Always verify the certificate is still current before you hire.</p>
       <p>If the report says to take samples of paint, dust, or soil, ship them to an <a href="labs.html">NLLAP-recognized laboratory</a> accredited for that matrix.</p>
       <hr>
@@ -289,8 +296,8 @@ def how_to_page() -> str:
       <p>National Lead Information Center: 1-800-424-LEAD (1-800-424-5323). That is EPA’s public number, printed here as text.</p>
 """.replace("{N_MI}", str(N_MI))
     return page(
-        "How to Test for Lead Paint with a Kit | Lead Paint Index",
-        "How to test a pre-1978 home for lead-based paint: EPA-recognized kits vs a certified inspector or risk assessor. HUD/EPA disclosure. Compiled by Stephen Shortell.",
+        "How to Test a Pre-1978 Home for Lead Paint",
+        "Kits are a screen, not an inspection. Pre-1978 HUD/EPA disclosure, when to hire a certified inspector or risk assessor, and when paint chips, dust, or soil go to an NLLAP lab.",
         "how-to.html",
         body,
         main_class="prose",
@@ -373,6 +380,8 @@ def labs_page() -> str:
       <p class="kicker">EPA National Lead Laboratory Accreditation Program</p>
       <h1>NLLAP-recognized lead laboratories</h1>
       <p class="lede">{N_UNIQUE} unique laboratories transcribed from EPA’s NLLAP list, Round 131 (July 2026, month 1 of 3), last updated August 4, 2026. {N_ROWS} rows as printed, including {LAB_META['duplicate_rows']} duplicate rows. Retrieved 2026-09-01. No invented labs. No paid placement.</p>
+      <p><a href="how-to.html">How to test a home for lead paint</a>.
+      <a href="verify.html">Verify a certified lead professional</a>.</p>
       <p>EPA established NLLAP so inspectors, risk assessors, and the public can find laboratories recognized to analyze <strong>paint chips, dust wipes, and/or soil</strong> for lead. HUD and EPA rules that require laboratory analysis of those matrices require an NLLAP-recognized lab. Confirm the lab is still recognized for the matrix you are sending before you ship a sample.</p>
       <p>Phones are copied as EPA printed them. They are not tracking numbers and are not click-to-call links.</p>
       <ul>
@@ -427,8 +436,8 @@ def labs_page() -> str:
       </script>
 """
     return page(
-        "EPA NLLAP Lead Laboratories | Lead Paint Index",
-        f"{N_UNIQUE} unique EPA-recognized NLLAP laboratories transcribed from Round 131 (updated August 4, 2026). No paid placement.",
+        "EPA NLLAP Labs: 104 Unique Laboratories",
+        "104 unique EPA-recognized NLLAP laboratories from Round 131 (updated 2026-08-04). Paint chips, dust wipes, and soil. Confirm current recognition before you ship a sample.",
         "labs.html",
         body,
     )
@@ -483,6 +492,8 @@ def michigan_page() -> str:
       <p class="kicker">Michigan Department of Health and Human Services · MiLeadSafe</p>
       <h1>Michigan certified lead inspectors and risk assessors</h1>
       <p class="lede">{N_MI} people transcribed from MDHHS lists updated 2026-08-27: {N_INSP} certified lead inspectors (inspector only) and {N_DUAL} certified lead inspector/risk assessors (dual certification). Retrieved 2026-09-01. No invented names. No paid placement.</p>
+      <p><a href="how-to.html">How to test a home for lead paint</a>.
+      <a href="verify.html">Verify a certified lead professional</a>.</p>
       <p>MDHHS: a certified inspector uses an XRF instrument to measure and identify lead. A certified risk assessor uses those findings to determine whether any lead found is a lead hazard. Some people hold both certifications; they appear only on the dual list.</p>
       <p>County headings are as MDHHS printed them (address of record). Some certificate holders are based outside Michigan. Phones are copied as printed; “Not Listed” is the state’s phrase. They are not tracking numbers and are not click-to-call links.</p>
       <ul>
@@ -542,8 +553,8 @@ def michigan_page() -> str:
       </script>
 """
     return page(
-        "Michigan Certified Lead Inspectors | Lead Paint Index",
-        f"{N_MI} Michigan certified lead inspectors and inspector/risk assessors transcribed from MDHHS lists updated 2026-08-27. No paid placement.",
+        "Michigan Lead Inspectors: 218 Certified",
+        "218 Michigan certified lead inspectors and inspector/risk assessors from MDHHS MiLeadSafe lists updated 2026-08-27. 25 inspector only, 193 dual. Verify the certificate before hiring.",
         "michigan.html",
         body,
     )
@@ -563,15 +574,15 @@ def verify_page() -> str:
       <p>Confirm the firm or individual is currently certified before you hire. EPA also maintains a list of entities whose certification has been suspended, revoked, modified, or reinstated; the locator page links that list.</p>
       <h2>What this index does ship</h2>
       <ul>
-        <li><a href="labs.html">{n} unique NLLAP laboratories</a> from EPA’s published table (Round 131, updated 2026-08-04).</li>
-        <li><a href="michigan.html">{mi} Michigan certified inspectors and inspector/risk assessors</a> from MDHHS lists updated 2026-08-27.</li>
+        <li><a href="labs.html">104 unique NLLAP labs</a> from EPA’s published table (Round 131, updated 2026-08-04).</li>
+        <li><a href="michigan.html">218 Michigan certified inspectors</a> from MDHHS lists updated 2026-08-27.</li>
       </ul>
       <h2>National Lead Information Center</h2>
       <p>1-800-424-LEAD (1-800-424-5323). Printed as text, not a click-to-call or tracking number.</p>
 """.replace("{n}", str(N_UNIQUE)).replace("{mi}", str(N_MI))
     return page(
-        "Verify a Lead Professional | Lead Paint Index",
-        "Use EPA’s Lead-based Paint Professional Locator to verify certified firms. This index does not scrape the JS search form.",
+        "Verify a Lead Professional on EPA’s Locator",
+        "EPA’s firm locator is a search form, not a downloadable roster. This index does not scrape it or invent names. Confirm certification on EPA before you hire.",
         "verify.html",
         body,
         main_class="prose",
@@ -604,8 +615,8 @@ def about_page() -> str:
       <p>Questions about the compilation: Stephen Shortell. For certification questions, use EPA, the National Lead Information Center (1-800-424-LEAD), or the state lead program — not this index.</p>
 """
     return page(
-        "About — Lead Paint Index",
-        "Independent lead-paint directory compiled by Stephen Shortell. Not a lab, not EPA-endorsed. Verify credentials with EPA or the state program.",
+        "About Lead Paint Index",
+        "Independent directory compiled by Stephen Shortell. Names transcribed from EPA NLLAP Round 131 and Michigan MDHHS lists. Not a lab or contractor. No paid placement.",
         "about.html",
         body,
         main_class="prose",
