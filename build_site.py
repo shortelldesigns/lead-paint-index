@@ -43,8 +43,8 @@ def nav_html(current: str) -> str:
 FOOT_NAV = " ".join(f'<a href="{h}">{lab}</a>' for h, lab in NAV)
 
 FOOTER_BLURB = (
-    "Lead Paint Index is an independent public directory compiled by Stephen Shortell. "
-    "It is not a laboratory, not a lead contractor, and not Shortell Designs. "
+    "Lead Paint Index is an independent public directory compiled by Shortell Designs. "
+    "It is not a laboratory and not a lead contractor. "
     "It is not endorsed by the U.S. EPA, HUD, or any state lead program. "
     "Names are transcribed from official lists. Certification and accreditation change. "
     "Verify a current credential with the issuing agency before hiring. "
@@ -88,7 +88,7 @@ def page(title: str, desc: str, current: str, body: str, main_class: str = "") -
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p class="byline">Stephen Shortell</p>
+      <p class="byline">Shortell Designs</p>
       <p>{FOOTER_BLURB}</p>
       <p class="foot-nav">{FOOT_NAV}</p>
     </div>
@@ -592,11 +592,11 @@ def verify_page() -> str:
 def about_page() -> str:
     body = f"""
       <h1>About Lead Paint Index</h1>
-      <p>Lead Paint Index is an <strong>independent public directory</strong> compiled by <strong>Stephen Shortell</strong>. It lists laboratories and people who already appear on official EPA and Michigan lists. It is a reading of those records, not a new credential.</p>
+      <p>Lead Paint Index is an <strong>independent public directory</strong> compiled by <strong>Shortell Designs</strong>. It lists laboratories and people who already appear on official EPA and Michigan lists. It is a reading of those records, not a new credential.</p>
       <h2>What this is not</h2>
       <ul>
         <li>Not a laboratory and not a lead inspection, risk assessment, or abatement company.</li>
-        <li>Not Shortell Designs, and not a product or service of any design studio.</li>
+        <li>Published by Shortell Designs as an independent directory — not as a laboratory or contractor service.</li>
         <li>Not endorsed by the U.S. Environmental Protection Agency, HUD, MDHHS, or any state lead program.</li>
         <li>Not a ranking, marketplace, or referral desk. There is no paid placement on laboratory or professional lists.</li>
         <li>Not Exclusive Live Calls. There is no live-call page, no tracking numbers, and no click-to-call.</li>
@@ -612,11 +612,11 @@ def about_page() -> str:
       <h2>Amazon Associates</h2>
       <p>How-to page product links are Amazon Associates Special Links using tag <code>radontestinde-20</code>. As an Amazon Associate I earn from qualifying purchases. Those links do not appear on laboratory or professional lists. EPA-recognized versus not-recognized status is disclosed next to each kit.</p>
       <h2>Contact</h2>
-      <p>Questions about the compilation: Stephen Shortell. For certification questions, use EPA, the National Lead Information Center (1-800-424-LEAD), or the state lead program — not this index.</p>
+      <p>Questions about the compilation: Shortell Designs. For certification questions, use EPA, the National Lead Information Center (1-800-424-LEAD), or the state lead program — not this index.</p>
 """
     return page(
         "About Lead Paint Index",
-        "Independent directory compiled by Stephen Shortell. Names transcribed from EPA NLLAP Round 131 and Michigan MDHHS lists. Not a lab or contractor. No paid placement.",
+        "Independent directory compiled by Shortell Designs. Names transcribed from EPA NLLAP Round 131 and Michigan MDHHS lists. Not a lab or contractor. No paid placement.",
         "about.html",
         body,
         main_class="prose",
@@ -630,7 +630,7 @@ A public directory of **EPA-recognized NLLAP lead laboratories** and **Michigan 
 
 Compiled from official lists. Names are transcribed from those sources. No invented labs or people.
 
-**By Stephen Shortell**
+**By Shortell Designs**
 
 Live: https://shortelldesigns.github.io/lead-paint-index/
 
