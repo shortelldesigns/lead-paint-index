@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shortelldesigns.github.io/lead-paint-index/sitemap.xml
