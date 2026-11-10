@@ -89,7 +89,8 @@ def split_company_city(raw: str) -> tuple[str, str, str]:
 
 
 def compile_nllap() -> None:
-    html = (SRC / "epa-nllap.html").read_text(errors="replace")
+    # Round 132 snapshot. Do not point this back at data/sources/epa-nllap.html (Round 131 archive).
+    html = (SRC / "epa-nllap-round132-2026-11-10.html").read_text(errors="replace")
     table = re.search(r"<table[\s\S]*?</table>", html, re.I).group(0)
     labs = []
     for r in re.findall(r"<tr[\s\S]*?</tr>", table, re.I):
@@ -127,9 +128,9 @@ def compile_nllap() -> None:
     meta = {
         "source": "https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list",
         "source_title": "National Lead Laboratory Accreditation Program List",
-        "epa_round": "Round 131, Month 1 of 3 (July 2026)",
-        "epa_updated": "2026-08-04",
-        "retrieved": "2026-09-01",
+        "epa_round": "Round 132, Month 3 of 3 (October 2026)",
+        "epa_updated": "2026-11-10",
+        "retrieved": "2026-11-10",
         "rows": len(labs),
         "unique_labs": unique_n,
         "duplicate_rows": len(labs) - unique_n,

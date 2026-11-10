@@ -135,7 +135,7 @@ def index_page() -> str:
             f"""        <a class="card" href="labs.html#st-{escape(code)}">
           <p class="kicker">{escape(name_of[code])}</p>
           <p class="stat">{n}<small>NLLAP lab{'s' if n != 1 else ''} (unique)</small></p>
-          <p class="meta">EPA list updated 2026-08-04. Confirm current recognition before you ship a sample.</p>
+          <p class="meta">EPA list updated 2026-11-10. Confirm current recognition before you ship a sample.</p>
         </a>"""
         )
     body = f"""
@@ -163,8 +163,8 @@ def index_page() -> str:
         <a class="card" href="labs.html">
           <p class="kicker">National · NLLAP</p>
           <p class="stat">{N_UNIQUE}<small>unique EPA-recognized labs</small></p>
-          <p>{N_ROWS} rows on the Round 131 table ({LAB_META['duplicate_rows']} duplicate rows as printed).</p>
-          <p class="meta">Paint chips, dust wipes, and/or soil. Updated 2026-08-04. Retrieved 2026-09-01.</p>
+          <p>{N_ROWS} rows on the Round 132 table ({LAB_META['duplicate_rows']} duplicate rows as printed).</p>
+          <p class="meta">Paint chips, dust wipes, and/or soil. Updated 2026-11-10. Retrieved 2026-11-10.</p>
         </a>
         <a class="card" href="michigan.html">
           <p class="kicker">Michigan · MDHHS MiLeadSafe</p>
@@ -189,7 +189,7 @@ def index_page() -> str:
       <div class="grid states">
 {chr(10).join(state_cards)}
       </div>
-      <p class="meta">Counts are unique laboratories after dropping three duplicate rows that EPA printed twice. The full table, including duplicates as published, is on the <a href="labs.html">NLLAP labs page</a>.</p>
+      <p class="meta">Counts are unique laboratories after dropping two duplicate rows that EPA printed twice. The full table, including duplicates as published, is on the <a href="labs.html">NLLAP labs page</a>.</p>
 
       <h2>How to use these lists</h2>
       <ul class="plain">
@@ -242,7 +242,7 @@ def how_to_page() -> str:
       <h3>1. EPA-recognized color-change kit (screen)</h3>
       <p>LeadCheck™ swabs are crushed, shaken, and rubbed on a painted surface. A pink or red color indicates lead. EPA’s recognition is for a <em>negative</em> finding by a trained professional on listed surfaces. Homeowner use is a screen only.</p>
       <h3>2. Mail-in sample to an NLLAP laboratory</h3>
-      <p>A paint chip, dust wipe, or soil sample analyzed by an EPA-recognized NLLAP lab is a laboratory result for that sample, not a whole-house inspection. Schneider Laboratories, Inc. (Richmond, Virginia) appears on the NLLAP list retrieved 2026-09-01. Consumer mail-in kits sold under that lab’s name are <strong>not</strong> EPA-recognized RRP test kits. They are sample-collection kits whose analysis is done at a lab.</p>
+      <p>A paint chip, dust wipe, or soil sample analyzed by an EPA-recognized NLLAP lab is a laboratory result for that sample, not a whole-house inspection. Schneider Laboratories, Inc. (Richmond, Virginia) appears on the NLLAP list retrieved 2026-11-10. Consumer mail-in kits sold under that lab’s name are <strong>not</strong> EPA-recognized RRP test kits. They are sample-collection kits whose analysis is done at a lab.</p>
       <h3>3. Certified inspector or risk assessor</h3>
       <p>A certified inspector uses X-ray fluorescence (XRF) and/or paint-chip sampling to map where lead-based paint is. A certified risk assessor samples deteriorated paint, dust, and bare soil to identify current hazards and recommend control options. A combination inspection and risk assessment does both. EPA: <a href="https://www.epa.gov/lead/where-can-i-find-qualified-professional-conduct-inspection">Where can I find a qualified professional to conduct an inspection?</a></p>
 
@@ -253,26 +253,26 @@ def how_to_page() -> str:
           <article class="kit">
             <p class="kicker">EPA-recognized screen</p>
             <p><span class="rec rec-yes">EPA-recognized (negative result)</span></p>
-            <h3>LeadCheck™ Swab Kit (8 swabs)</h3>
+            <h3>LeadCheck™ swabs</h3>
             <p>Luxfer Magtech LeadCheck™. Instant color change. EPA recognizes a negative result on wood, ferrous metal, drywall, and plaster when used by a trained professional. A homeowner swab is a screen.</p>
-            <p><a class="kit-link" href="https://www.amazon.com/LeadCheck-Swab-Kit/dp/B00AAD5MY6/?tag=radontestinde-20">LeadCheck Swab Kit, ASIN B00AAD5MY6 <span class="paid">(paid link)</span></a></p>
+            <p><a rel="sponsored nofollow" class="kit-link" href="https://www.amazon.com/s?k=3M+LeadCheck+swabs&amp;tag=radontestinde-20">LeadCheck swabs <span class="paid">(paid link)</span></a></p>
           </article>
           <article class="kit">
             <p class="kicker">Mail-in lab · not an RRP kit</p>
             <p><span class="rec rec-no">Not EPA-recognized as an RRP kit</span></p>
             <h3>Schneider Labs asbestos &amp; lead combo</h3>
             <p>Sample collection for one asbestos sample and one lead sample, analyzed at Schneider Laboratories (an NLLAP lab). Lab fees included. This is not a LeadCheck/D-Lead RRP kit and not a certified inspection.</p>
-            <p><a class="kit-link" href="https://www.amazon.com/Asbestos-Test-Schneider-Overnight-Shipping/dp/B08T257C5Q/?tag=radontestinde-20">Schneider asbestos &amp; lead combo, ASIN B08T257C5Q <span class="paid">(paid link)</span></a></p>
+            <p><a rel="sponsored nofollow" class="kit-link" href="https://www.amazon.com/Asbestos-Test-Schneider-Overnight-Shipping/dp/B08T257C5Q/?tag=radontestinde-20">Schneider asbestos &amp; lead combo, ASIN B08T257C5Q <span class="paid">(paid link)</span></a></p>
           </article>
           <article class="kit">
             <p class="kicker">Mail-in lab · not an RRP kit</p>
             <p><span class="rec rec-no">Not EPA-recognized as an RRP kit</span></p>
             <h3>Schneider Labs asbestos, lead, and mold combo</h3>
             <p>One mold sample, one asbestos sample, and one lead sample (paint chip, dust wipe, or soil). Mail-in analysis. Not an EPA-recognized RRP test kit.</p>
-            <p><a class="kit-link" href="https://www.amazon.com/dp/B00IJGXO96/?tag=radontestinde-20">Schneider asbestos, lead, and mold combo, ASIN B00IJGXO96 <span class="paid">(paid link)</span></a></p>
+            <p><a rel="sponsored nofollow" class="kit-link" href="https://www.amazon.com/dp/B00IJGXO96/?tag=radontestinde-20">Schneider asbestos, lead, and mold combo, ASIN B00IJGXO96 <span class="paid">(paid link)</span></a></p>
           </article>
         </div>
-        <p class="meta">As an Amazon Associate I earn from qualifying purchases. ASINs were verified as live Amazon listings on 2026-09-01. D-Lead® is also EPA-recognized; this index did not find a stable consumer Amazon ASIN for it and does not invent one. ESCA Tech sells D-Lead® to distributors. The Massachusetts kit is for Massachusetts inspectors and risk assessors.</p>
+        <p class="meta">As an Amazon Associate I earn from qualifying purchases. Schneider ASINs were verified as live Amazon listings on 2026-09-01. The LeadCheck link is a tagged Amazon search; this page does not name a pack size or a price. D-Lead® is also EPA-recognized; this index did not find a stable consumer Amazon ASIN for it and does not invent one. ESCA Tech sells D-Lead® to distributors. The Massachusetts kit is for Massachusetts inspectors and risk assessors.</p>
       </div>
 
       <hr>
@@ -379,13 +379,13 @@ def labs_page() -> str:
     body = f"""
       <p class="kicker">EPA National Lead Laboratory Accreditation Program</p>
       <h1>NLLAP-recognized lead laboratories</h1>
-      <p class="lede">{N_UNIQUE} unique laboratories transcribed from EPA’s NLLAP list, Round 131 (July 2026, month 1 of 3), last updated August 4, 2026. {N_ROWS} rows as printed, including {LAB_META['duplicate_rows']} duplicate rows. Retrieved 2026-09-01. No invented labs. No paid placement.</p>
+      <p class="lede">{N_UNIQUE} unique laboratories transcribed from EPA’s NLLAP list, Round 132 (October 2026, month 3 of 3), last updated November 10, 2026. {N_ROWS} rows as printed, including {LAB_META['duplicate_rows']} duplicate rows. Retrieved 10 November 2026 (US/Pacific). No invented labs. No paid placement.</p>
       <p><a href="how-to.html">How to test a home for lead paint</a>.
       <a href="verify.html">Verify a certified lead professional</a>.</p>
       <p>EPA established NLLAP so inspectors, risk assessors, and the public can find laboratories recognized to analyze <strong>paint chips, dust wipes, and/or soil</strong> for lead. HUD and EPA rules that require laboratory analysis of those matrices require an NLLAP-recognized lab. Confirm the lab is still recognized for the matrix you are sending before you ship a sample.</p>
       <p>Phones are copied as EPA printed them. They are not tracking numbers and are not click-to-call links.</p>
       <ul>
-        <li>Source: <a href="https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list">National Lead Laboratory Accreditation Program List</a> (updated 2026-08-04; retrieved 2026-09-01)</li>
+        <li>Source: <a href="https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list">National Lead Laboratory Accreditation Program List</a> (page last updated November 10, 2026; retrieved 10 November 2026, US/Pacific)</li>
         <li>Program: <a href="https://www.epa.gov/lead/nllap">The National Lead Laboratory Accreditation Program (NLLAP)</a></li>
       </ul>
       <p class="meta">{LAB_META['commercial_yes']} listings marked commercially available; {LAB_META['commercial_no']} marked not commercially available; one listing has a blank commercial field as printed. Matrices as marked on the table: paint chips {LAB_META['paint']}, soil {LAB_META['soil']}, dust wipes {LAB_META['dust']} (row counts, including duplicates).</p>
@@ -437,7 +437,7 @@ def labs_page() -> str:
 """
     return page(
         "EPA NLLAP Labs: 104 Unique Laboratories",
-        "104 unique EPA-recognized NLLAP laboratories from Round 131 (updated 2026-08-04). Paint chips, dust wipes, and soil. Confirm current recognition before you ship a sample.",
+        "104 unique EPA-recognized NLLAP laboratories from Round 132 (October 2026, page last updated November 10, 2026). Paint chips, dust wipes, and soil. Confirm current recognition before you ship a sample.",
         "labs.html",
         body,
     )
@@ -574,7 +574,7 @@ def verify_page() -> str:
       <p>Confirm the firm or individual is currently certified before you hire. EPA also maintains a list of entities whose certification has been suspended, revoked, modified, or reinstated; the locator page links that list.</p>
       <h2>What this index does ship</h2>
       <ul>
-        <li><a href="labs.html">104 unique NLLAP labs</a> from EPA’s published table (Round 131, updated 2026-08-04).</li>
+        <li><a href="labs.html">104 unique NLLAP labs</a> from EPA’s published table (Round 132, October 2026, page last updated November 10, 2026).</li>
         <li><a href="michigan.html">218 Michigan certified inspectors</a> from MDHHS lists updated 2026-08-27.</li>
       </ul>
       <h2>National Lead Information Center</h2>
@@ -602,9 +602,9 @@ def about_page() -> str:
         <li>Not Exclusive Live Calls. There is no live-call page, no tracking numbers, and no click-to-call.</li>
       </ul>
       <h2>Where the names come from</h2>
-      <p>Retrieved 2026-09-01.</p>
+      <p>NLLAP list retrieved 10 November 2026 (US/Pacific). Michigan lists retrieved 2026-09-01.</p>
       <ul>
-        <li><strong>NLLAP laboratories:</strong> {N_ROWS} rows ({N_UNIQUE} unique labs; {LAB_META['duplicate_rows']} duplicate rows as EPA printed them) from the <a href="https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list">National Lead Laboratory Accreditation Program List</a>, Round 131, July 2026 (month 1 of 3), last updated August 4, 2026. Company, city, phone, matrices, commercial availability, and accrediting-organization code as printed. City was split from EPA’s combined “Company Name, City &amp; Phone” cell; the original cell is stored in the data file.</li>
+        <li><strong>NLLAP laboratories:</strong> {N_ROWS} rows ({N_UNIQUE} unique labs; {LAB_META['duplicate_rows']} duplicate rows as EPA printed them) from the <a href="https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list">National Lead Laboratory Accreditation Program List</a>, Round 132, October 2026 (month 3 of 3), page last updated November 10, 2026, retrieved 10 November 2026 (US/Pacific). Company, city, phone, matrices, commercial availability, and accrediting-organization code as printed. City was split from EPA’s combined “Company Name, City &amp; Phone” cell; the original cell is stored in the data file.</li>
         <li><strong>Michigan:</strong> {N_INSP} certified lead inspectors and {N_DUAL} certified lead inspector/risk assessors from MDHHS MiLeadSafe lists updated August 27, 2026. Cert #, name, firm, city, county heading, and phone as printed.</li>
         <li><strong>EPA firm locator:</strong> not transcribed. It is a JavaScript search form. See <a href="verify.html">Verify a pro</a>.</li>
       </ul>
@@ -616,7 +616,7 @@ def about_page() -> str:
 """
     return page(
         "About Lead Paint Index",
-        "Independent directory compiled by Shortell Designs. Names transcribed from EPA NLLAP Round 131 and Michigan MDHHS lists. Not a lab or contractor. No paid placement.",
+        "Independent directory compiled by Shortell Designs. Names transcribed from EPA NLLAP Round 132 and Michigan MDHHS lists. Not a lab or contractor. No paid placement.",
         "about.html",
         body,
         main_class="prose",
@@ -640,13 +640,15 @@ Live: https://shortelldesigns.github.io/lead-paint-index/
 
 | File | Contents |
 | --- | --- |
-| `data/nllap.json` | EPA NLLAP Round 131 table (updated 2026-08-04, retrieved 2026-09-01) |
+| `data/nllap.json` | EPA NLLAP Round 132 table (October 2026, month 3 of 3; page last updated 2026-11-10, retrieved 2026-11-10) |
 | `data/michigan.json` | MDHHS certified inspectors and inspector/risk assessors (lists updated 2026-08-27) |
 | `how-to.html` | Original guide: pre-1978 housing, HUD/EPA disclosure, kits vs certified inspection |
 
 ---
 
-## Counts (retrieved 2026-09-01)
+## Counts
+
+NLLAP retrieved 2026-11-10. Michigan lists retrieved 2026-09-01.
 
 | List | Records |
 | --- | ---: |
@@ -664,7 +666,7 @@ The EPA Lead-based Paint Professional Locator is a JavaScript search form and is
 
 ## Sources
 
-- [National Lead Laboratory Accreditation Program List](https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list) — Round 131, July 2026; last updated August 4, 2026
+- [National Lead Laboratory Accreditation Program List](https://www.epa.gov/lead/national-lead-laboratory-accreditation-program-list) — Round 132, October 2026; page last updated November 10, 2026; retrieved 2026-11-10
 - [Lead Test Kits](https://www.epa.gov/lead/testkits)
 - [Real Estate Disclosures about Potential Lead Hazards](https://www.epa.gov/lead/real-estate-disclosures-about-potential-lead-hazards)
 - [EPA Lead-based Paint Professional Locator](https://cdxapps.epa.gov/ocspp-oppt-lead/firm-location-search) (redirects to `cdxocsppapps.epa.gov`)
